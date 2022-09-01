@@ -301,7 +301,7 @@ select * from A where deptId in (select deptId from B);
 select * from A where exists (select 1 from B where A.deptId = B.deptId); 
 ```
 
-因为exists查询的理解就是，先执行主查询，获得数据后，再放到子查询中做条件验证，根据验证结果（true或者false），来决定主查询的数据结果是否得意保留。
+因为exists查询的理解就是，先执行主查询，获得数据后，再放到子查询中做条件验证，根据验证结果（true或者false），来决定主查询的数据结果是否得以保留。
 
 那么，这样写就等价于：
 
